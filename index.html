@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>First Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="index.js">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="myScript.js">
 </head>
 <body>
     
@@ -23,6 +24,9 @@
                 <li><a href="#">Herbs</a></li>
                 <li><a href="#">Grains</a></li>
                 <li><a href="#">About Us</a></li>
+                <li><a href="#contacts">Contact</a></li>
+                <button type="login"><a href="#">Login</a></button>
+                <button><a href="#">Signe up</a></button>
             </ul>
         </nav>
         <div class="gross">
@@ -36,34 +40,116 @@
                 <div class="kind">
                     <img src="/images/fruitsymbol.webp" height="100px" width="100px" alt="">
                     <p>FRUITS</p>
-                    <BUTton><a href="#">Shop</a></BUTton>
+                    <button><a href="#">Shop</a></button>
                 </div>
                 <div class="kind">
                     <img src="/images/vegetable.png" height="100px" width="100px" alt="">
                     <p>VEGETABLES</p>
-                    <BUTton><a href="#">Shop</a></BUTton>
+                    <button><a href="#">Shop</a></button>
                 </div>
                 <div class="kind">
                     <img src="/images/herbs.jpeg" height="100px" width="100px" alt="">
                     <p>HERBS</p>
-                    <BUTton><a href="#">Shop</a></BUTton>
+                    <button><a href="#">Shop</a></button>
                 </div>
                 <div class="kind">
                     <img src="/images/grains.jpg" height="100px" width="100px" alt="">
                     <p>GRAINS</p>
-                    <BUTton><a href="#">Shop</a></BUTton>
+                    <button><a href="#">Shop</a></button>
                 </div>
             </div>
         </div>
     </div>
-    <div>
-        <h3>Handpicked deals to get you started</h3>
-        <div>
-            <img src="/images/image1.jpg" width="300px" height="300px">
-            <ul></ul>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="/images/image2.jpg" height="700px" style="width:100%">
+          <div class="text">Winter basket</div>
+        </div>
+        <div class="mySlides fade">
+          <img src="/images/image1.jpg" height="700px" style="width:100%">
+          <div class="text">The offer basket</div>
+        </div>
+        <div class="mySlides fade">
+          <img src="/images/image4.jpg" height="700px" style="width:100%">
+          <div class="text">The family basket</div>
         </div>
     </div>
-    <footer>
+   
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+         slides[slideIndex-1].style.display = "block";  
+         setTimeout(showSlides, 2000); // Change image every 2 seconds
+       }
+
+    </script>
+    <div>
+        <h3>How does it work</h3>
+        <div class="work">
+            <div class="saver">
+               <img src="/images/farmer.svg" height="100px" width="100px">
+               <P class="p1">WE SOURCE</P>
+               <P>We source as much as possible directly from farms in Kenya, and East Africa</P>
+            </div>
+            <div class="saver">
+               <img src="/images/package.svg" height="100px" width="100px">
+               <P class="p1">WE PACK</P>
+               <P>We package the products after checking the quality of the vegetables and fruits</P>
+            </div>
+            <div class="saver">
+               <img src="/images/delivery.svg" height="100px" width="100px">
+               <P class="p1">WE DELIVER</P>
+               <p>We deliver bags to different collection points accross Kenya on different days</P>
+            </div>
+            <div class="saver">
+               <img src="/images/cutlery.svg" height="100px" width="100px">
+               <P class="p1">YOU ENJOY</P>
+               <P>You enjoy the taste of certified produces</P>
+            </div>
+        </div>
+    </div>
+    <div class="fruits">
+        <h3>Handpicked deals to get you started</h3>
+        <div class="deals">
+            <div class="front">
+                <img src="/images/image1.jpg" width="300px" height="300px">
+                <p>FRUITS</p>
+                <p>The offer basket</p>
+                <span>KES. 2,200.00/Basket</span>
+            </div>
+            <div class="front">
+                <img src="/images/image2.jpg" width="300px" height="300px">
+                <p>FRUITS</p>
+                <p>Winter basket</p>
+                <span>KES. 2,750.00/Basket</span>
+            </div>
+            <div class="front">
+                <img src="/images/image3.jpg" width="300px" height="300px">
+                <p>CITRUS</p>
+                <p>Voipixe basket</p>
+                <span>KES. 200/Kg</span>
+            </div>
+            <div class="front">
+                <img src="/images/image4.jpg" width="300px" height="300px">
+                <p>VEGGIES</p>
+                <p>The family basket</p>
+                <span>KES. 3,250/Basket</span>
+            </div>
+        </div>
+    </div>
+    <div>
+        
+    </div>
+    <footer id="contacts">
         <div class="main-cont">
             <div class="left box">
                 <h2>About Us</h2>
@@ -78,19 +164,19 @@
                 </div>
             </div>
             <div class="center center box">
-                <div>Address</div>
+                <h2>Address</h2>
                 <div class="content">
                     <div class="place">
                         <span class="fas fa-phone-alt"></span>
-                        <span class="text">+254-71042100</span>
+                        <span>+254-71042100</span>
                     </div>
                     <div class="home">
                         <span class="fas fa-map-marker-alt"></span>
-                        <span class="text">Nirobi, Ngara</span>
+                        <span>Nirobi, Ngara</span>
                     </div>
                     <div class="email">
                         <span class="fas fa-envelope"></span>
-                        <span class="text">josephkdo@gmail.com</span>
+                        <span>josephkdo@gmail.com</span>
                     </div>
                 </div>
             </div>
@@ -99,11 +185,11 @@
                 <div class="content">
                     <form action="#">
                         <div class="email">
-                            <div class="text">Email *</div>
+                            <div>Email *</div>
                             <input type="email" required>
                         </div>
                         <div class="msg">
-                            <div class="text">Message *</div>
+                            <div>Message *</div>
                             <textarea cols="25" rows="2" required></textarea>
                         </div>
                         <div class="btn">
@@ -114,6 +200,9 @@
             </div>
         </div>
     </footer>
+    <div class="last">
+        <p>v.2.0.16 © Copyright © 2020. Handcrafted by Joe</p>
+    </div>
 </body>
 
 </html>
